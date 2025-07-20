@@ -1,58 +1,53 @@
-# Dice Game Simulator
+# Dice Game Simulator (Java Edition)
 
-This project is a simple, multiplayer dice-rolling game created for a university project. Players take turns rolling a six-sided die, and the player with the highest roll wins the round.
+This project is a simple, multiplayer dice-rolling game built entirely in Java with a Swing GUI. Players take turns rolling a six-sided die, and the player with the highest roll wins the round.
 
-This repository contains two versions of the game:
-1.  A **Java Swing desktop application** (the original project).
-2.  A **web-based version** (HTML, CSS, JS) for easy online play and demonstration.
+This application is packaged as a runnable `.jar` file, which is the standard method for distributing Java desktop applications.
 
 ## Features
 
-- **Multiplayer Support**: Play with 2 to 4 players.
-- **Round-Based Gameplay**: Continue playing rounds to see who gets the most wins.
-- **Win Tracking**: The game automatically keeps score.
-- **Tie Handling**: If multiple players roll the highest number, the round is declared a tie and no one wins.
+- **Java-Based GUI**: The user interface is built using the Java Swing framework.
+- **Multiple Players**: Supports 2 to 4 players.
+- **Round-Based Gameplay**: Play as many rounds as you like.
+- **Score Tracking**: Automatically tracks the number of wins for each player.
+- **Tie Detection**: Correctly handles rounds where there is a tie for the highest score.
 
 ---
 
-## Playable Web Version
+## 🎲 How to Play the Game
 
-You can play the web version of the game by opening the `index.html` file located in the `web-version` folder.
-
-For a live demo, you can host this folder using GitHub Pages.
-
----
-
-## How to Run the Original Java Version
-
-The source code for the Java desktop application is located in the `/java-version` directory.
+You can run this game by downloading the single executable `.jar` file.
 
 ### Prerequisites
 
-- You must have the **Java Development Kit (JDK)** installed on your system.
+- You must have **Java** installed on your computer (version 8 or newer).
 
 ### Steps to Run
 
-1.  **Clone the Repository**
+1.  **Download the Game:**
+    Download the   `DiceGame.jar` file.
+
+2.  **Run the Application:**
+    You can run the game in one of two ways:
+
+    **A) From the Command Line (Recommended):**
+    Open a terminal or command prompt, navigate to the folder where you downloaded the file, and run the following command:
     ```bash
-    git clone https://github.com/pipplettee/DiceGameSimulator.git
+    java -jar DiceGame.jar
     ```
 
-2.  **Navigate to the Java Source Folder**
-    Open your terminal or command prompt and navigate to the correct directory:
-    ```bash
-    cd DiceGameSimulator/java-version
-    ```
+    **B) By Double-Clicking:**
+    On most systems, you can simply **double-click** the `DiceGame.jar` file to launch the application.
 
-3.  **Compile the Java Code**
-    Use the Java compiler (`javac`) to compile all the `.java` files:
-    ```bash
-    javac *.java
-    ```
+The game window should now appear on your screen!
 
-4.  **Run the Application**
-    Execute the main class to launch the GUI:
-    ```bash
-    java DiceGameGUI
-    ```
-The game window will now appear on your screen.
+---
+
+## Source Code
+
+The complete source code for the project is located in the `/java-files` directory. It is structured into the following classes:
+
+- `Dice.java`: Simulates a six-sided die.
+- `Player.java`: Represents a player with a name and win count.
+- `GameEngine.java`: Contains the core game logic.
+- `DiceGameGUI.java`: The main class that builds the GUI and runs the application.
