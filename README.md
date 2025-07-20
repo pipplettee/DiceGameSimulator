@@ -35,7 +35,7 @@ The source code for the Java desktop application is located in the `/java-versio
 
 1.  **Clone the Repository**
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/pipplettee/DiceGameSimulator.git
     ```
 
 2.  **Navigate to the Java Source Folder**
