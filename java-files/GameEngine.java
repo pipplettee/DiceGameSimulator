@@ -1,28 +1,16 @@
 import java.util.List;
 import java.util.ArrayList;
 
-/**
- * The GameEngine class contains the main logic for the dice game.
- */
 public class GameEngine {
     private List<Player> players;
     private Dice dice;
 
-    /**
-     * Constructor for the GameEngine.
-     * @param players A list of players participating in the game.
-     */
     public GameEngine(List<Player> players) {
         this.players = players;
         this.dice = new Dice();
     }
 
-    /**
-     * Plays one round of the game. Each player rolls the dice,
-     * and the player with the highest roll wins the round.
-     * In case of a tie for the highest score, no one wins the round.
-     * @return A string describing the results of the round.
-     */
+    
     public String playRound() {
         if (players == null || players.isEmpty()) {
             return "No players in the game.";
@@ -58,10 +46,6 @@ public class GameEngine {
         return "<html>" + roundResults.toString() + "</html>";
     }
 
-    /**
-     * Gets the current scores of all players.
-     * @return A string showing the number of wins for each player.
-     */
     public String showResults() {
         StringBuilder results = new StringBuilder("--- Current Standings ---<br>");
         for (Player player : players) {
